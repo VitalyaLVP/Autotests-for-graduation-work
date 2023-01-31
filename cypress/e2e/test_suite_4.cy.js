@@ -15,7 +15,7 @@ describe('Автотесты для тест-комплекта 4.', () => {
         cy.get('input[name="q"]')
             .type('Водопад').should('have.value', 'Водопад')
 
-        cy.get('.button').click()
+        cy.contains('Толковать сон').click()
 
         cy.get('.newsitem__title[href="/sonnik/miller/vodopad/"]').should('be.visible')
         cy.get('.newsitem__title[href="/sonnik/hasse/vodopad/"]').should('be.visible')
@@ -27,7 +27,7 @@ describe('Автотесты для тест-комплекта 4.', () => {
         cy.get('input[name="q"]')
             .type('Амур').should('have.value', 'Амур')
 
-        cy.get('.button').click()
+        cy.contains('Толковать сон').click()
 
         cy.get('div> .article__item > p')
             .should('be.visible')
